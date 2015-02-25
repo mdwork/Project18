@@ -472,7 +472,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     bottom: -10px;
                     width: 189px;
                     height: 12px;
-                    background: url("../images/content/jerrycan_shadow.png") no-repeat center;
+                    background: url("../images/content/sprites.png") no-repeat 0 -19px;
                 }
                 .jerrycan-img {
                     position: relative;
@@ -487,10 +487,10 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 width: 90px;
                 height: 90px;
                 margin-bottom: 3px;
-                background: url("../images/content/price_bg.png") no-repeat center;
+                background: url("../images/content/sprites.png") no-repeat -70px -31px;
             }
             .price-box.old {
-                background-image: url("../images/content/price_old_bg.png");
+                background-position: -189px 0;
             }
                 .price-box .cur-price {
                     position: absolute;
@@ -1051,37 +1051,37 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
             position: absolute;
             left: -24px;
         }
-        .client-date:before {
+        li.client-date:before {
             top: -4px;
             width: 17px;
             height: 19px;
-            background: url("../images/content/calendar_ico.png") no-repeat center;
+            background: url("../images/content/sprites.png") no-repeat 0 0;
         }
-        .client-location:before {
+        li.client-location:before {
             top: -4px;
             width: 17px;
             height: 22px;
-            background: url("../images/content/map_ico.png") no-repeat center;
+            background: url("../images/content/sprites.png") no-repeat 0 -31px;
         }
         li.client-name:before {
             left: -23px;
             top: -3px;
             width: 16px;
             height: 20px;
-            background: url("../images/content/name_ico.png") no-repeat center;
+            background: url("../images/content/sprites.png") no-repeat -17px -31px;
         }
-        .client-mail:before {
+        li.client-mail:before {
             top: 4px;
             width: 17px;
             height: 12px;
-            background: url("../images/content/mail_ico.png") no-repeat center;
+            background: url("../images/content/sprites.png") no-repeat -17px 0;
         }
         li.client-tell:before {
             left: -22px;
             top: 0;
             width: 14px;
             height: 14px;
-            background: url("../images/content/tell_ico.png") no-repeat center;
+            background: url("../images/content/sprites.png") no-repeat -57px 0;
         }
             .client-info li a {
                 font-size: 14px;
@@ -1187,7 +1187,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                                     width: 15px;
                                     height: 15px;
                                     margin-left: 8px;
-                                    background: url("../images/content/star.png") no-repeat;
+                                    background: url("../images/content/sprites.png") no-repeat -34px 0;
                                     text-indent: -9999px;
                                 }
             .copy-box {
@@ -1558,7 +1558,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                         height: 7px;
                         top: 5px;
                         left: 4px;
-                        background-image: url("../images/content/star-wrap.png");
+                        background: url("../images/content/sprites.png") no-repeat 49px 0;
                     }
                     .select-section-wrap {
                         position: relative;
