@@ -1657,12 +1657,9 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                                 border: none;
                             }
                             #wrap-popup .captcha input.result {
-                                font: 400 15px 'Open Sans';
-                                line-height: 26px;
-
-                                -webkit-border-radius: 3px;
-                                -moz-border-radius: 3px;
-                                border-radius: 3px;
+                                border: 1px solid #E4E4E4;
+                                font: 400 14px 'Open Sans';
+                                line-height: 24px;
                             }
 
                 .btn-submit {

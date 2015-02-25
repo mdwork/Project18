@@ -85,7 +85,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.wrap-form').prepend('<img src="images/header/banner_man.png" class="banner-man" alt="banner">');
+    $('.wrap-form').prepend('<!--noindex--><img src="images/header/banner_man.png" class="banner-man" alt="banner"><!--/noindex-->');
 
     $("body").append('<span class="wrap-form-ajax"></span>');
     $('.wrap-form-ajax').load("form.html #bg-popup");
