@@ -233,6 +233,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     vertical-align: middle;
                     width: 318px;
                     padding: 14px;
+                    background: #F4F4F4;
                     background: rgba(244, 244, 244, 0.95);
                     border: 4px solid #1FB42E;
                     text-align: center;
@@ -243,6 +244,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 }
                 .home .form-box,
                 .form-box.contacts {
+                    background: #ffffff;
                     background: rgba(255, 255, 255, 0.95);
                 }
                     .form-header {
@@ -309,11 +311,12 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                                     }
                                 .captcha input.result {
                                     display: inline-block;
-                                    width: 46px;
+                                    width: 44px;
                                     height: 28px;
-                                    padding: 0 9px;
+                                    padding: 0 8px;
                                     margin-bottom: 0;
                                     line-height: 26px;
+                                    text-align: center;
                                 }
                                 .captcha img {
                                     vertical-align: middle;
@@ -643,6 +646,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 }
     .wrap-content h1 {
         margin-bottom: 18px;
+        padding-left: 10px;
         font-size: 24px;
         font-weight: 600;
         line-height: 16px;
@@ -682,16 +686,18 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     margin: 0 15px;
                     background: url("../images/content/header_cat_bg.jpg") repeat;
                 }
-                    .content-header-cat h2 a {
+                    .content-header-cat h2 span {
                         overflow: hidden;
+                        position: relative;
                         display: block;
                         width: 100%;
-                        text-decoration: none;
+                        box-sizing: border-box;
+                        padding: 8px 28px 8px 8px;
                         font-size: 13px;
-                        line-height: 23px;
+                        font-weight: 400;
                         color: #fefefe;
                     }
-                        .content-header-cat h2 a:after {
+                        .content-header-cat h2 span:after {
                             content: "";
                             position: absolute;
                             top: 7px;
@@ -702,11 +708,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                             -moz-border-radius: 9px;
                             border-radius: 9px;
                             background: url("../images/content/link_arrow.png") no-repeat center #FFFFFF;
-                        }
-                        .content-header-cat h2 a span {
-                            float: left;
-                            margin: 0 28px 0 8px;
-                            padding: 8px 0;
                         }
 
         .wrap-recomend-ads {
@@ -790,11 +791,18 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                                     font-weight: 700;
                                 }
                         .ads-content p {
-                            margin-bottom: 3px;
+                            margin-bottom: 8px;
                             font-size: 13px;
                             line-height: 18px;
                             letter-spacing: 0.12px;
                         }
+                        a.region {
+                            text-decoration: underline;
+                            color: #1db52b;
+                        }
+                        a.region:hover {
+                             text-decoration: none;
+                         }
                         a.link-more-info {
                             position: relative;
                             float: right;
@@ -864,40 +872,54 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 }
         .important-text {
             float: left;
-            width: 520px;
-            margin-bottom: 12px;
+            width: 450px;
+            margin-bottom: 35px;
             font-size: 15px;
             color: #2b2b2b;
         }
         .menu-page {
             position: absolute;
-            top: 30px;
             right: 0;
+            top: 45px;
             float: right;
         }
             .menu-page header {
-                margin-bottom: 7px;
+                margin-bottom: 20px;
                 font-size: 13px;
-                font-weight: bold;
+                font-weight: 700;
                 color: #2b2b2b;
             }
             .contents {
                 position: relative;
-                width: 195px;
-                padding: 5px 5px 8px 22px;
+                width: auto;
+                max-width: 315px;
+                padding: 5px 5px 8px 27px;
                 background: #1DB52B;
             }
+                .contents:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 15px;
+                    top: -11px;
+                    width: 0;
+                    height: 0;
+                    border-left: 13px solid transparent;
+                    border-right: 13px solid transparent;
+                    border-bottom: 12px solid #1DB52B;
+                }
                 .contents li {
-                    margin-bottom: 5px;
+                    padding-left: 3px;
                     list-style-type: disc;
-                    text-indent: -6px;
                     color: #ffffff;
+                    line-height: 17px;
                 }
                     .contents li a {
                         font-size: 13px;
                         text-decoration: none;
                         color: #ffffff;
                         border-bottom: 1px dotted #ffffff;
+                        white-space: pre-wrap;
                     }
                     .contents li a:hover {
                         border: none;
@@ -1133,6 +1155,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
             .main-foto {
                 float: left;
                 margin: 0 13px 10px 0;
+                max-width: 765px;
             }
             .wrap-characteristics {
                 overflow: hidden;
@@ -1192,11 +1215,9 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                                     background: url("../images/content/sprites.png") no-repeat -34px 0;
                                     text-indent: -9999px;
                                 }
-            .copy-box {
-                width: 100%;
-                box-sizing: border-box;
-                padding: 6px 10px 7px;
-                background: #FFEB7F;
+            .imgcopyright {
+                margin-left: -5px;
+                margin-bottom: 7px;
             }
 
 /*----------------------------------------------------------------------------------*/
@@ -1205,6 +1226,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 .sidebar {
     float: left;
     width: 200px;
+    padding-bottom: 20px;
 }
     .header-sidebar {
         height: 31px;
@@ -1340,6 +1362,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     .wrap-ads-full-width {
         padding-top: 14px;
         margin-bottom: 45px;
+        clear: both;
     }
         .wrap-ads-full-width .header-sidebar {
             margin-bottom: 20px;
@@ -1462,8 +1485,8 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 /*----------------------------------------------------------------------------------*/
     .close {
         position: absolute;
-        right: -17px;
-        top: -19px;
+        right: -22px;
+        top: -20px;
         font-size: 34px;
         line-height: 19px;
         font-weight: 600;
@@ -1516,7 +1539,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 }
         .free-ads-form {
             width: 485px;
-            height: 472px;
+            height: 535px;
             padding-top: 10px;
             background: #1DB52B;
         }
@@ -1527,7 +1550,10 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     .free-ads-form p {
                         font-size: 12px;
                         color: #ffffff;
-}
+                    }
+                    .text-label p {
+                        margin: -2px 0 3px 5px;
+                    }
                     .input-style {
                         width: 443px;
                         height: 28px;
@@ -1548,19 +1574,24 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     }
                     .name-wrap,
                     .email-wrap,
-                    .tell-wrap {
+                    .tell-wrap,
+                    .textarea-wrap {
                         position: relative;
                     }
                     .name-wrap:before,
                     .email-wrap:before,
-                    .tell-wrap:before {
+                    .tell-wrap:before,
+                    .textarea-wrap:before {
                         content: "";
                         position: absolute;
                         width: 8px;
                         height: 7px;
                         top: 5px;
                         left: 4px;
-                        background: url("../images/content/sprites.png") no-repeat 49px 0;
+                        background: url("../images/content/sprites.png") no-repeat -49px 0;
+                    }
+                    .textarea-wrap:before {
+                        top: 10px;
                     }
                     .select-section-wrap {
                         position: relative;
@@ -1569,7 +1600,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     .select-section {
                         width: 465px;
                         height: 28px;
-                        padding-left: 8px;
+                        padding-left: 10px;
                         font-size: 14px;
                         color: #2b2b2b;
                         -webkit-border-radius: 3px;
@@ -1595,16 +1626,20 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     .list-add-file li:first-child {
                         margin: 0;
                     }
+                        .list-add-file select,
+                        .list-add-file .select-section-wrap {
+                            width: 225px;
+                        }
                         .list-add-file p {
                             margin: 0 0 7px 5px;
                         }
                             .add-file-name {
                                 position: relative;
                                 display: inline-block;
-                                width: 203px;
+                                width: 201px;
                                 height: 28px;
-                                margin-bottom: 10px;
-                                padding-left: 12px;
+                                margin-bottom: 2px;
+                                padding-left: 14px;
                                 padding-right: 10px;
                                 font-size: 14px;
                                 line-height: 28px;
@@ -1630,11 +1665,11 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                                 display: none;
                             }
                     .description-wrap textarea {
-                        width: 445px;
-                        height:100px;
-                        padding: 10px;
+                        width: 439px;
+                        height: 108px;
+                        padding: 6px 12px 6px 14px;
                         resize: none;
-                        font-size: 14px;
+                        font: 400 14px "Open Sans";
                         color: #2b2b2b;
                         -webkit-border-radius: 3px;
                         -moz-border-radius: 3px;
@@ -1660,17 +1695,18 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                             }
                             #wrap-popup .captcha input.result {
                                 height: 24px;
-                                width: 33px;
-                                padding: 0 5px;
+                                width: 26px;
+                                padding: 0 8px;
                                 border: 1px solid #E4E4E4;
                                 font: 400 14px 'Open Sans';
                                 line-height: 24px;
+                                text-align: center;
                             }
 
                 .btn-submit {
                     float: right;
                     padding: 0 15px;
-                    margin: 10px 12px 0 0;
+                    margin: 2px 12px 0 0;
                     font-size: 15px;
                     font-weight: 700;
                     line-height: 32px;
@@ -1678,7 +1714,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 /*----------------------------------BREAD-CRUMBS------------------------------------*/
 .bread-crumbs {
     overflow: hidden;
-    padding: 7px 0 14px;
+    padding: 7px 0 14px 10px;
 }
     .bread-crumbs > span {
         position: relative;
@@ -1824,6 +1860,31 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------OTHER----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.wrap-list-gallery {
+    overflow: hidden;
+    width: 785px;
+}
+    .list-gallery {
+        width: 820px;
+        padding-top: 5px;
+    }
+        .list-gallery li {
+            position: relative;
+            float: left;
+            width: 214px;
+            margin: 0 59px 30px 0;
+        }
+            .list-gallery img {
+                height: 148px;
+                width: 211px;
+            }
+            .list-gallery .wrap-foto:before {
+                right: 44px;
+            }
+            .date {
+                color: #029B12;
+            }
+
 #bg-popup {
     display: none;
     position: absolute;
