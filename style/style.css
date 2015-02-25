@@ -118,6 +118,9 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     .wrapper-contact-page:after {
         height: 363px;
     }
+    .page-contact .wrapper:after {
+        height: 430px;
+    }
 .content {
     position: relative;
     width: 980px;
@@ -1396,7 +1399,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     position: relative;
     z-index: 10;
     height: 140px;
-    margin-top: -46px;
+    margin-top: -12px;
     background-image: url("../images/footer/contacts_footer_bg.png");
     line-height: 138px;
 }
@@ -1869,4 +1872,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 .border-bot {
     margin-bottom: 3px;
     border-bottom: 1px solid #EDEDED;
+}
+.location {
+    margin-top: -430px;
 }

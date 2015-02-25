@@ -89,4 +89,15 @@ $(document).ready(function(){
 
     $("body").append('<span class="wrap-form-ajax"></span>');
     $('.wrap-form-ajax').load("form.html #bg-popup");
+
+    var elemTell = $('.client-tell'),
+        txtTell = elemTell.text(),
+        textTellLng = txtTell.length;
+
+    elemTell.html(
+        elemTell.text(txtTell.spli)
+        + '...' + '<a class="show-all" href="#">показать</a>'
+    )
+
+
 });
