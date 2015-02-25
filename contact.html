@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, initial-scale=1, user-scalable=yes">
+    <title>Объявления - Oil Service</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <style type="text/css">
+        /* Set a size for our map container, the Google Map will take up 100% of this container */
+        #map {
+            position: absolute;
+            bottom: 0;
+            z-index: 1 !important;
+            width: 100%;
+            height: 257px;
+        }
+    </style>
+
+    <!--
+        You need to include this script on any page that has a Google Map.
+        When using Google Maps on your own site you MUST signup for your own API key at:
+            https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+        After your sign up replace the key in the URL below or paste in the new script tag that Google provides.
+    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var mapOptions = {
+                center: new google.maps.LatLng(48.4718784,34.9810763),
+                zoom: 20,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using out element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            setMarkers(map, places);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function setMarkers(map, locations) {
+            //Определяем область показа маркеров
+            var latlngbounds = new google.maps.LatLngBounds();
+
+            var image = new google.maps.MarkerImage( 'images/content/mark.png',
+                    new google.maps.Size(46,66), // размеры иконок
+                    new google.maps.Point(0,0),
+                    new google.maps.Point(7,36)
+            );
+
+            for (var i = 0; i < places.length; i++) {
+                var myLatLng = new google.maps.LatLng(locations[i][1], locations[i][2]);
+                //Добавляем координаты маркера в область
+                latlngbounds.extend(myLatLng);
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    icon: image,
+                    title: locations[i][0]
+                });
+            }
+        }
+        var places = [
+            ['ул. Матлахова, 13',48.4718944,34.9806663]
+        ];
+    </script>
+</head>
+
+<body class="page-contact">
+    <div class="wrapper">
+        <div class="wrap-header">
+            <header class="header content">
+                <div class="main-logo">
+                    <a href="index.html">
+                        <img src="images/header/main_logo.png" alt="logo">
+                        Oil Service - обслуживание автомобилей
+                    </a>
+                </div>
+
+                <div class="box-contact">
+                    <ul class="choose-language">
+                        <li class="active"><span>Рус</span></li>
+                        <li><a href="#">Укр</a></li>
+                    </ul>
+
+                    <ul class="header-contacts">
+                        <li class="header-tell">
+                            <span>Телефоны:</span>
+                            <img src="images/header/tel_header.png" class="tell-img" alt="tell">
+                        </li>
+
+                        <li class="operation-time">
+                            <span>Время работы:</span>
+                            <table>
+                                <tr>
+                                    <td>пн-пт</td>
+                                    <td>09.00 - 21.00</td>
+                                </tr>
+                                <tr>
+                                    <td>сб</td>
+                                    <td>11.00 - 18.00</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div><!--end BOX-CONTACT-->
+            </header>
+
+            <nav class="wrap-nav">
+                <ul class='main-nav'>
+                    <li><a href='index.html'>Главная</a></li>
+                    <li><a href='single.html'>О нас</a></li>
+                    <li><a href='articles.html'>Статьи</a></li>
+                    <li><a href='advertisings.html'>Объявления</a></li>
+                    <li><a href='gallery.html'>Предприятия</a></li>
+                    <li class="current-menu-item"><span>Контакты</span></li>
+                </ul>
+            </nav>
+        </div><!--end WRAP-header-->
+
+        <div class="wrap-content">
+            <div class="bread-crumbs">
+                <span typeof="v:Breadcrumb">
+                    <a href="index.html" rel="v:url" property="v:title">Главная</a>
+                </span>
+                <span typeof="v:Breadcrumb">
+                    <span class="breadcrumb_last" property="v:title">Объявления</span>
+                </span>
+            </div><!--end BREAD-CRUMBS-->
+
+            <header>
+                <h1>Контакты</h1>
+            </header>
+
+            <main class="content">
+                <div class="overflow">
+                    <ul class="contacts-list">
+                        <li class="client-tell">
+                            <img src="images/content/contact-tells.png" alt="tells">
+                        </li>
+                        <li class="client-mail">
+                            <img src="images/content/contact-email.png" alt="email">
+                        </li>
+                    </ul>
+
+                    <div class="form-box contacts">
+                        <header class="form-header align-l">Написать нам</header>
+
+                        <form class="feedback" action="#" method="post">
+                            <input class="star-bg" type="text" placeholder="Ваше имя">
+                            <input class="star-bg" type="email" placeholder="E-mail">
+                            <textarea class="star-bg" placeholder="Текст сообщения"></textarea>
+
+                            <div class="captcha">
+                                <label>Ответ: <input class="result" type="text"></label>
+                                <label class="star-bg"><span>Решите задание:</span> <img src="images/header/captcha.jpg" alt="captcha"></label>
+                            </div>
+
+                            <input type="button" class="btn" value="Отправить">
+                        </form>
+                    </div><!--end FORM-BOX-->
+                </div>
+            </main>
+        </div>
+    </div><!--end WRAPPER-->
+
+    <div class="location">
+        <p class="pre-map">Территориально находимся в г. Днепропетровске</p>
+        <div id="map"></div>
+    </div>
+
+    <div class="wrap-footer">
+
+
+        <footer class="content">
+            <div class="wrap-contact-footer">
+                <div class="contact-footer-box">
+                    <div class="box-copyright">
+                        <img class="logo-copyright" src="images/footer/fenix_logo.png" alt="Феникс Индастри">
+                        <span class="top">Разработка дизайна:</span><br>
+                        <span>&copy;2014 <a href="http://fnx.dp.ua/" rel="nofollow">Феникс Индастри</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div><!--end WRAP-FOOTER-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/mainJs.js"></script>
+</body>
+</html>
