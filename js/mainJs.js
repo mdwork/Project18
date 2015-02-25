@@ -75,4 +75,18 @@ $(document).ready(function(){
         });
         console.log('sdfs')
     }
+
+    $('.cur-price').each(function(){
+        if($(this).text().length == 5) {
+            $(this).css('font-size','21px');
+        }
+        else if($(this).text().length > 5) {
+            $(this).css('font-size','18px');
+        }
+    });
+
+    $('.wrap-form').prepend('<img src="images/header/banner_man.png" class="banner-man" alt="banner">');
+
+    $("body").append('<span class="wrap-form-ajax"></span>');
+    $('.wrap-form-ajax').load("form.html #bg-popup");
 });
