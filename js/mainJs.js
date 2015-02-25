@@ -73,7 +73,6 @@ $(document).ready(function(){
             prevText: "",
             nextText: ""
         });
-        console.log('sdfs')
     }
 
     $('.cur-price').each(function(){
@@ -90,14 +89,29 @@ $(document).ready(function(){
     $("body").append('<span class="wrap-form-ajax"></span>');
     $('.wrap-form-ajax').load("form.html #bg-popup");
 
-    var elemTell = $('.client-tell'),
-        txtTell = elemTell.text(),
-        textTellLng = txtTell.length;
+    var elemTell = $('.show-tell'),
+        txtTell = elemTell.text();
 
-    elemTell.html(
-        elemTell.text(txtTell.spli)
-        + '...' + '<a class="show-all" href="#">показать</a>'
-    )
+    var arrTell = txtTell.split(''),
+        arrTxt = [],
+        resTxt = '';
+
+    $.each(arrTell, function(index){
+        if(index > 8 ) return;
+
+        arrTxt.push(arrTell[index]);
+    });
+
+    $.each(arrTxt, function(index, value){
+        resTxt += value;
+    });
+    elemTell.text(resTxt);
+
+    elemTell.html(elemTell.html() + '...' + '<a class="show-all" href="#">показать</a>');
+
+    $('.show-all').on('click', function(){
+        $(this).parent().text(txtTell);
+    });
 
 
 });
