@@ -1766,7 +1766,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 }
     .serv-table thead th {
         position: relative;
-        padding: 10px 10px 9px;
+        padding: 10px 10px 9px 12px;
         background: #1CB42B;
         font-size: 18px;
         font-weight: 600;
@@ -1781,7 +1781,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 
     .serv-table tbody td {
         position: relative;
-        padding: 7px 10px 6px;
+        padding: 7px 10px 6px 12px;
         background: #f6f6f9;
         border-bottom: 1px solid #ffffff;
         text-align: center;
