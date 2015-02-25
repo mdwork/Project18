@@ -84,34 +84,36 @@ $(document).ready(function(){
         }
     });
 
-    $('.wrap-form').prepend('<!--noindex--><img src="images/header/banner_man.png" class="banner-man" alt="banner"><!--/noindex-->');
+    $('.wrap-form').prepend('<img src="images/header/banner_man.png" class="banner-man" alt="banner">');
 
     $("body").append('<span class="wrap-form-ajax"></span>');
     $('.wrap-form-ajax').load("form.html #bg-popup");
 
-    var elemTell = $('.show-tell'),
-        txtTell = elemTell.text();
+    var elemTell = $('.show-tell');
 
-    var arrTell = txtTell.split(''),
-        arrTxt = [],
-        resTxt = '';
+    $.each(elemTell, function(index, elem){
 
-    $.each(arrTell, function(index){
-        if(index > 8 ) return;
+        var txtTell = $(elem).text(),
+            arrTell = txtTell.split(''),
+            arrTxt = [],
+            resTxt = '';
 
-        arrTxt.push(arrTell[index]);
+        $.each(arrTell, function(index){
+            if(index > 8 ) return;
+
+            arrTxt.push(arrTell[index]);
+        });
+
+        $.each(arrTxt, function(index, value){
+            resTxt += value;
+        });
+
+        $(elem).text(resTxt);
+        $(elem).html($(elem).html() + '...' + '<a class="show-all" href="#">показать</a>');
+
+        $('.show-all').on('click', function(e){
+            e.preventDefault();
+            $(this).parent().text(txtTell);
+        });
     });
-
-    $.each(arrTxt, function(index, value){
-        resTxt += value;
-    });
-    elemTell.text(resTxt);
-
-    elemTell.html(elemTell.html() + '...' + '<a class="show-all" href="#">показать</a>');
-
-    $('.show-all').on('click', function(){
-        $(this).parent().text(txtTell);
-    });
-
-
 });
