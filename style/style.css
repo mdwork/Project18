@@ -1757,10 +1757,65 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 background-color: #1DB52B;
                 color: #ffffff;
             }
-/*----------------------------------------------------------------------------------*/
-/*-------------------------------------RESPONSIVE-----------------------------------*/
-/*----------------------------------------------------------------------------------*/
+/*-------------------------------------TABLE----------------------------------------*/
+.serv-table {
+    width: 100%;
+}
+    .serv-table thead th {
+        position: relative;
+        padding: 10px 10px 9px;
+        background: #1CB42B;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+    }
+    .serv-table thead .price-th {
+        width: 95px;
+        text-align: center;
+    }
 
+    .serv-table tbody td {
+        position: relative;
+        padding: 7px 10px 6px;
+        background: #f6f6f9;
+        border-bottom: 1px solid #ffffff;
+        text-align: center;
+    }
+        .serv-table tbody td:before,
+        .serv-table thead th.price-th:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -1px;
+            top: 9px;
+            width: 1px;
+            height: 16px;
+            background: #d7d7d7;
+        }
+    .serv-table thead th.price-th:before {
+        top: 12px;
+    }
+    .serv-table tbody td:first-child {
+        text-align: left;
+    }
+        .serv-table tbody td:first-child:before {
+            display: none;
+        }
+    .serv-table tbody td.price-td {
+        font-size: 18px;
+        font-weight: 700;
+        font-style: italic;
+    }
+        .serv-table tbody td.price-td span {
+            position: relative;
+            top: -6px;
+            font-size: 10px;
+            font-weight: 600;
+            font-style: italic;
+            text-transform: uppercase;
+        }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------OTHER----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
