@@ -893,7 +893,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 position: relative;
                 width: auto;
                 max-width: 315px;
-                padding: 5px 5px 8px 27px;
+                padding: 5px 10px 8px 27px;
                 background: #1DB52B;
             }
                 .contents:before {
@@ -1148,10 +1148,22 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
         margin-bottom: 0;
     }
 /*-----------------------------------ABOUT-DOG--------------------------------------*/
-        .main {}
-            .main p {
+        .editor {}
+            .editor h3 {
+                margin-bottom: 8px;
+            }
+            .editor p,
+            .editor li {
                 line-height: 1.4;
             }
+            .editor ul {
+                margin-bottom: 16px;
+                margin-left: 30px;
+            }
+                .editor li {
+                    padding-left: 3px;
+                    list-style-type: disc;
+                }
             .main-foto {
                 float: left;
                 margin: 0 13px 10px 0;
@@ -1346,6 +1358,12 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                     position: absolute;
                     left: 0;
                     top: 0;
+                }
+                .contacts-list li.client-tell:before {
+                    top: -2px;
+                }
+                .contacts-list li.client-location:before {
+                    top: -6px;
                 }
         .form-box.contacts {
             float: right;

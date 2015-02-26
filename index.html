@@ -7,7 +7,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <!--[if lt IE 10]><script src="js/jquery.placeholder.js"></script><![endif]-->
 </head>
 
 <body class="home">
@@ -122,7 +121,7 @@
                         </li>
                     </ul>
 
-                    <button class="btn serv-btn">Оставить заявку на обслуживание</button>
+                    <button class="btn serv-btn js-popup">Оставить заявку на обслуживание</button>
                 </div>
             </div>
 
@@ -289,7 +288,29 @@
         </footer>
     </div><!--end WRAP-FOOTER-->
 
+    <div class="popup-home-form" style="display: none;">
+        <div class="form-box">
+            <header class="form-header">Отправить заявку на обслуживание</header>
+
+            <form class="feedback" action="#" method="post">
+                <fieldset>
+                    <input class="star-bg" type="text" placeholder="Ваше имя">
+                    <input class="star-bg" type="tel" placeholder="Телефон">
+                    <input class="star-bg" type="text" placeholder="Данные автомобиля">
+                </fieldset>
+
+                <div class="captcha">
+                    <label>Ответ: <input class="result" type="text"></label>
+                    <label class="star-bg"><span>Решите задание:</span> <img src="images/header/captcha.jpg" alt="captcha"></label>
+                </div>
+
+                <input type="button" class="btn" value="Отправить">
+            </form>
+        </div>
+    </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/mainJs.js"></script>
+    <!--[if lt IE 10]><script src="js/jquery.placeholder.js"></script><![endif]-->
 </body>
 </html>
