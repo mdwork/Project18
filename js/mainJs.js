@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $("body").append('<span class="wrap-form-ajax"></span>');
+    $('.wrap-form-ajax').load("form.html #bg-popup");
+
     /*popup function*/
     function popupWindow(targetClick, showCurrentForm) {
         targetClick.on('click', function (e) {
@@ -8,9 +11,9 @@ $(document).ready(function(){
                 fotoPopup = $('#wrap-popup');
 
             bgPopup.addClass('show_js');
-            fotoPopup.prepend('<span class="close icon-close_js">&times;</span>')
-                .animate({'opacity': 1}, 500);
+            fotoPopup.prepend('<span class="close icon-close_js">&times;</span>').animate({'opacity': 1}, 500);
             showCurrentForm.addClass('show_js');
+            console.log(showCurrentForm);
 
             bgPopup.height($(document).height());
 
@@ -18,6 +21,7 @@ $(document).ready(function(){
                 scrollTop = window.pageYOffset;
 
             fotoPopup.css({
+                'top': scrollTop,
                 'left': '50%',
                 'margin-left': - (fotoInPopupW / 2)
             });
@@ -33,6 +37,7 @@ $(document).ready(function(){
                 fotoPopup.css({
                     'opacity' : 0,
                     'left': 0,
+                    'top': 0,
                     'margin-left': 0
                 });
             });
@@ -44,10 +49,22 @@ $(document).ready(function(){
     }
     /*end*/
 
-    var curLinkAuthorization = $('.popup-js'),
-        curBlockShow = $('.free-ads-popup');
+    function interval() {
+        var curLinkAuthorization = $('.popup-js'),
+            curBlockShow = $('.free-ads-popup'),
+            curLinkAdd = $('.js-popup'),
+            curPopupAdd = $('.popup-home-form');
 
-    popupWindow(curLinkAuthorization, curBlockShow);
+        if(curBlockShow.length > 0 && curPopupAdd.length > 0) {
+            popupWindow(curLinkAdd, curPopupAdd);
+            popupWindow(curLinkAuthorization, curBlockShow);
+
+            $('input, textarea').placeholder();
+            clearInterval(intervalClose);
+        }
+    }
+    var intervalClose = setInterval(interval, 50);
+
 
     if ( $('#bigslider').length > 0 ) {
         if ( $('#carousel').length > 0 ) {
@@ -85,9 +102,6 @@ $(document).ready(function(){
     });
 
     $('.wrap-form').prepend('<!--noindex--><img src="images/header/banner_man.png" class="banner-man" alt="banner"><!--/noindex-->');
-
-    $("body").append('<span class="wrap-form-ajax"></span>');
-    $('.wrap-form-ajax').load("form.html #bg-popup");
 
     var elemTell = $('.show-tell');
 

@@ -1931,7 +1931,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     display: block !important;
 }
 #wrap-popup {
-    margin-top: 150px;
+    margin-top: 90px;
 }
 .list-private-ads header.bg-orange {
     background: #EC740A;
@@ -1961,4 +1961,8 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 .border-bot {
     margin-bottom: 3px;
     border-bottom: 1px solid #EDEDED;
+}
+.free-ads-popup,
+.popup-home-form {
+    display: none;
 }
