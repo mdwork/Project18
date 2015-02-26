@@ -1696,22 +1696,22 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                         background: #F6F6F6;
                     }
 
-                    #wrap-popup .captcha {
+                    .free-ads-popup .captcha {
                         margin: 0 10px 0 0;
                     }
-                        #wrap-popup .captcha label {
+                        .free-ads-popup .captcha label {
                             padding-left: 14px;
                             font-size: 14px;
                             color: #ffffff;
                         }
-                            #wrap-popup .captcha label.star-bg span:before {
+                            .free-ads-popup .captcha label.star-bg span:before {
                                 font-weight: 400;
                                 color: #ffffff;
                             }
-                            #wrap-popup .captcha img {
+                            .free-ads-popup .captcha img {
                                 border: none;
                             }
-                            #wrap-popup .captcha input.result {
+                            .free-ads-popup .captcha input.result {
                                 height: 24px;
                                 width: 26px;
                                 padding: 0 8px;
