@@ -288,9 +288,147 @@
         </footer>
     </div><!--end WRAP-FOOTER-->
 
+    <!--POPUP-->
+    <div id="bg-popup">
+        <div class="ovefview"></div>
+        <div id="wrap-popup">
+            <div class="popup-home-form">
+                <div class="form-box">
+                    <header class="form-header">Отправить заявку на обслуживание</header>
 
+                    <form class="feedback" action="#" method="post">
+                        <fieldset>
+                            <input class="star-bg" type="text" placeholder="Ваше имя">
+                            <input class="star-bg" type="tel" placeholder="Телефон">
+                            <input class="star-bg" type="text" placeholder="Данные автомобиля">
+                        </fieldset>
+
+                        <div class="captcha">
+                            <label>Ответ: <input class="result" type="text"></label>
+                            <label class="star-bg"><span>Решите задание:</span> <img src="images/header/captcha.jpg" alt="captcha"></label>
+                        </div>
+
+                        <input type="button" class="btn" value="Отправить">
+                    </form>
+                </div>
+            </div>
+
+            <div class="free-ads-popup">
+                <form class="free-ads-form" name="reg" method="post">
+                    <ul class="clear">
+                        <li>
+                            <label class="name-wrap">
+                                <input class="input-style" type="text" name="title" placeholder="Заголовок">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="name-wrap">
+                                <input class="input-style" type="text" name="name" placeholder="Ваше имя">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="email-wrap">
+                                <input class="input-style" type="email" name="email" placeholder="E-mail">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="tell-wrap">
+                                <input class="input-style" type="tel" name="tell" placeholder="Телефон">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="tell-wrap">
+                                <input class="input-style" type="tel" name="price" placeholder="Цена, грн">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="select-section-wrap name-wrap">
+                                <select class="select-section" name="rubrika">
+                                    <option value="0">Выберите раздел</option>
+                                    <option value="1">Раздел 1</option>
+                                    <option value="2">Раздел 2</option>
+                                    <option value="3">Раздел 3</option>
+                                </select>
+                            </label>
+                        </li>
+
+                        <li>
+                            <ul class="list-add-file">
+                                <li>
+                                    <label class="select-section-wrap name-wrap">
+                                        <select class="select-section" name="region">
+                                            <option value="0">Выберите область</option>
+                                            <option value="1">Область 1</option>
+                                            <option value="2">Область 2</option>
+                                            <option value="3">Область 3</option>
+                                        </select>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class="select-section-wrap name-wrap">
+                                        <select class="select-section" name="date_end">
+                                            <option value="0">Период размещения</option>
+                                            <option value="7">1 неделя</option>
+                                            <option value="14">2 недели</option>
+                                            <option value="30">1 месяц</option>
+                                            <option value="61">2 месяца</option>
+                                            <option value="92">3 месяца</option>
+                                        </select>
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <ul class="list-add-file">
+                                <li>
+                                    <p>* Главная фотография</p>
+                                    <label class="main-photo-wrap">
+                                        <span class="add-file-name name-wrap">Выберите файл...</span>
+                                        <input class="add-file" type="file" name="main-photo">
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <p>Дополнительные фотографии</p>
+                                    <label class="additional-photo-wrap">
+                                        <span class="add-file-name">Выберите файл...</span>
+                                        <input class="add-file" type="file" name="additional-photo">
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="text-label"><p>(Размер каждой фотографии не более 2 Мб)</p></li>
+
+                        <li>
+                            <label class="description-wrap textarea-wrap">
+                                <textarea class="des-style" name="description" placeholder="Описание (обязательно)"></textarea>
+                            </label>
+                        </li>
+
+                        <li>
+                            <div class="captcha">
+                                <label>Ответ: <input class="result" type="text"></label>
+                                <label class="star-bg"><span>Решите задание:</span> <img src="images/header/captcha.jpg" alt="captcha"></label>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <input class="btn-submit btn" type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
     <!--[if lt IE 10]><script src="js/jquery.placeholder.js"></script><![endif]-->
     <script src="js/mainJs.js"></script>
 </body>

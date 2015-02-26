@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    $("body").append('<span class="wrap-form-ajax"></span>');
-    $('.wrap-form-ajax').load("form.html #bg-popup");
-
     /*popup function*/
     function popupWindow(targetClick, showCurrentForm) {
         targetClick.on('click', function (e) {
@@ -49,21 +46,14 @@ $(document).ready(function(){
     }
     /*end*/
 
-    function interval() {
-        var curLinkAuthorization = $('.popup-js'),
-            curBlockShow = $('.free-ads-popup'),
-            curLinkAdd = $('.js-popup'),
-            curPopupAdd = $('.popup-home-form');
+    var curLinkAuthorization = $('.popup-js'),
+        curBlockShow = $('.free-ads-popup'),
+        curLinkAdd = $('.js-popup'),
+        curPopupAdd = $('.popup-home-form');
 
-        if(curBlockShow.length > 0 && curPopupAdd.length > 0) {
-            popupWindow(curLinkAdd, curPopupAdd);
-            popupWindow(curLinkAuthorization, curBlockShow);
 
-            $('input, textarea').placeholder();
-            clearInterval(intervalClose);
-        }
-    }
-    var intervalClose = setInterval(interval, 50);
+        popupWindow(curLinkAdd, curPopupAdd);
+        popupWindow(curLinkAuthorization, curBlockShow);
 
 
     if ( $('#bigslider').length > 0 ) {
